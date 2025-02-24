@@ -79,7 +79,7 @@ Config = [
         ,{syslog, {git, "https://github.com/2600hz/erlang-syslog", {ref, "bbad537a1cb5e4f37e672d2e2665659e850662d0"}}}
         ,{rebar_vsn_plugin,{git, "https://github.com/erlware/rebar_vsn_plugin.git", {branch, "master"}}}
        ] ++
-        [{K, {git_subdir, "https://github.com/kageds/kazoo_core.git", {branch, Branch}, "apps"}} || K <- KAZOO_CORE]},
+        [{K, {git_subdir, "https://github.com/vonix-networks/kazoo_core.git", {branch, Branch}, "apps"}} || K <- KAZOO_CORE]},
 
 {overrides, [
     {override, plists, [
