@@ -22,6 +22,8 @@ jobs:
       run: make compile
     - name: Create Release
       run: make build-release
+    - name: Verify File Before Upload
+      run: ls -lh _build/prod/rel/
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v1
       with:
