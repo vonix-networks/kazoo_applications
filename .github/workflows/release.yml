@@ -1,0 +1,30 @@
+name: Create Kazoo Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # Runs when a tag like v1.0.0 is pushed
+
+jobs:
+
+  release:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: erlang:24
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check dependency
+      run: make deps
+    - name: Compile
+      run: make compile
+    - name: Create Release
+      run: make build-release
+    - name: Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      with:
+        files: _build/prod/rel/kazoo-4.4-vonix.tar.gz
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed for authentication
