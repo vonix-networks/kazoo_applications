@@ -6,6 +6,7 @@
 %%%-----------------------------------------------------------------------------
 -module(acdc_queue_manager_tests).
 
+-spec test() -> ok.
 -include_lib("eunit/include/eunit.hrl").
 
 -include("../src/acdc.hrl").
@@ -21,11 +22,13 @@
 %% @doc
 %% @end
 %%------------------------------------------------------------------------------
+-spec ss_size_empty_test_() -> any().
 ss_size_empty_test_() ->
     SS = #strategy_state{agents=pqueue4:new()},
     [?_assertEqual(0, acdc_queue_manager:ss_size('rr', SS, 'free'))
     ,?_assertEqual(0, acdc_queue_manager:ss_size('rr', SS, 'logged_in'))].
 
+-spec ss_size_one_busy_test_() -> any().
 ss_size_one_busy_test_() ->
     SS = #strategy_state{agents=[]},
     State = #state{strategy='mi', strategy_state = SS},

@@ -7,6 +7,7 @@
 %%%-------------------------------------------------------------------
 -module(acdc_queue_manager_test).
 
+-spec test() -> ok.
 -include_lib("eunit/include/eunit.hrl").
 
 -include("../src/acdc.hrl").
@@ -21,11 +22,13 @@
 %%% TESTS
 %%% =====
 
+-spec ss_size_empty_test_() -> any().
 ss_size_empty_test_() ->
     SS = #strategy_state{agents=[]},
     [?_assertEqual(0, acdc_queue_manager:ss_size('mi', SS, 'free'))
     ,?_assertEqual(0, acdc_queue_manager:ss_size('mi', SS, 'logged_in'))].
 
+-spec ss_size_one_busy_test_() -> any().
 ss_size_one_busy_test_() ->
     State = #state{strategy='mi'
                   ,strategy_state=#strategy_state{agents=[]}
@@ -44,6 +47,7 @@ ss_size_one_busy_test_() ->
 %% should be used.
 %% @end
 %%--------------------------------------------------------------------
+-spec sbrr_multiple_candidates_test_() -> any().
 sbrr_multiple_candidates_test_() ->
     S = create_state(),
 
@@ -100,6 +104,7 @@ sbrr_multiple_candidates_test_() ->
 %% of calls and agents. Verifies the state as it mutates.
 %% @end
 %%--------------------------------------------------------------------
+-spec sbrr_multi_phase_test_() -> any().
 sbrr_multi_phase_test_() ->
     S = create_state(),
 
@@ -299,6 +304,7 @@ sbrr_multi_phase_test_() ->
 %% assortment of skills assigned to it.
 %% @end
 %%--------------------------------------------------------------------
+-spec sbrr_load_test_() -> any().
 sbrr_load_test_() ->
     sbrr_load_test(?SBRR_LOAD_TEST_ENABLED).
 
