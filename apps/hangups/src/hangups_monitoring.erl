@@ -164,6 +164,8 @@ threshold_exceeded(_HangupCause, _Stats, 'count') ->
     'false';
 threshold_exceeded(_HangupCause, _Stats, 'mean') ->
     'false';
+threshold_exceeded(_HangupCause, _Stats, 'instant') ->
+    'false';
 threshold_exceeded(HangupCause, Stats, Key) ->
     ConfigName = hangups_util:meter_name(HangupCause),
     Threshold = kapps_config:get_float(ConfigName, folsom_field(Key), 0.0),
