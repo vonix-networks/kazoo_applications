@@ -112,6 +112,15 @@ Config = [
         sasl
         ,lager
         ,lager_syslog
+        ,cf
+        ,erlware_commons
+        ,jsone
+        ,mimerl
+        ,parsexml
+        ,qdate
+        ,qdate_localtime
+        ,recon
+        ,yamerl      
         ,{syntax_tools, none}
         ,{compiler, none}
         ,{runtime_tools, none}
@@ -141,6 +150,8 @@ Config = [
         ,{jonny5, none}
         ,{konami, none}
         ,{martini, none}
+        ,{meck, none}
+        ,{nklib, none}
         ,{media_mgr, none}
         ,{milliwatt, none}
         ,{notify, none}
