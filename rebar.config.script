@@ -77,7 +77,6 @@ Config = [
         ,{mimerl, "1.3.0"}
         ,{parsexml, "1.0.0"}
         ,{qdate, "0.7.3"}
-        ,{qdate_localtime, "1.2.1"}
         ,{recon, "2.5.6"}
         ,{yamerl, "0.10.0"}
         ,{lager_syslog, {git, "https://github.com/erlang-lager/lager_syslog.git", {tag, "3.0.3"}}}
@@ -118,7 +117,6 @@ Config = [
         ,mimerl
         ,parsexml
         ,qdate
-        ,qdate_localtime
         ,recon
         ,yamerl      
         ,{syntax_tools, none}
