@@ -71,10 +71,20 @@ Config = [
            ,rebar3_git_vsn
           ]},
 {deps, [{lager, "3.9.2"}
+        ,{cf, "0.3.1"}
+        ,{erlware_commons, "1.7.0"}
+        ,{jsone, "1.9.0"}
+        ,{mimerl, "1.3.0"}
+        ,{parsexml, "1.0.0"}
+        ,{qdate, "0.7.3"}
+        ,{qdate_localtime, "1.2.1"}
+        ,{recon, "2.5.6"}
+        ,{yamerl, "0.10.0"}
         ,{lager_syslog, {git, "https://github.com/erlang-lager/lager_syslog.git", {tag, "3.0.3"}}}
         ,{syslog, {git, "https://github.com/2600hz/erlang-syslog", {ref, "bbad537a1cb5e4f37e672d2e2665659e850662d0"}}}
         ,{rebar_vsn_plugin,{git, "https://github.com/erlware/rebar_vsn_plugin.git", {branch, "master"}}}
         ,{martini,{git, "https://github.com/openkazoo/martini.git", {branch, "main"}}}
+        ,{meck, {git, "https://github.com/eproxus/meck.git", {ref, "5aaa24886db404f995c9a91b421367f6bfe6e566"}}}
         ,{nklib, {git, "https://github.com/kageds/erlang-nklib", {ref, "901f7ccf27c46a6fa384158ca1b22f2853ba4304"}}}
        ] ++
         [{K, {git_subdir, "https://github.com/vonix-networks/kazoo_core.git", {branch, Branch}, "apps"}} || K <- KAZOO_CORE]},
