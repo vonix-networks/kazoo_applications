@@ -85,7 +85,7 @@ Config = [
         ,{rebar_vsn_plugin,{git, "https://github.com/erlware/rebar_vsn_plugin.git", {branch, "master"}}}
         ,{martini,{git, "https://github.com/openkazoo/martini.git", {branch, "main"}}}
         ,{meck, {git, "https://github.com/eproxus/meck.git", {ref, "5aaa24886db404f995c9a91b421367f6bfe6e566"}}}
-        ,{nklib, {git, "https://github.com/kageds/erlang-nklib", {ref, "901f7ccf27c46a6fa384158ca1b22f2853ba4304"}}}
+        ,{nklib, {git, "https://github.com/vonix-networks/erlang-nklib", {branch, "master"}}}
        ] ++
         [{K, {git_subdir, "https://github.com/vonix-networks/kazoo_core.git", {branch, Branch}, "apps"}} || K <- KAZOO_CORE]},
 
