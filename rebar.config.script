@@ -97,7 +97,7 @@ Config = [
 ]},
 
 {relx,
- [{release, {kazoo, git},
+ [{release, {kazoo, "4.4-vonix"},
         [
         sasl
         ,lager
