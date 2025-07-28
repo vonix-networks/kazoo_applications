@@ -6,4 +6,8 @@ An OTP application
 Build
 -----
 
-    $ rebar3 compile
+    $ make compile build-release
+    
+BUY ME A COFFEE
+---------------
+https://buymeacoffee.com/kageds
