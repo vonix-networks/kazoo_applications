@@ -22,8 +22,7 @@
     ?WORKER('ecallmgr_fs_nodes'),
     ?WORKER('ecallmgr_fs_channels'),
     ?WORKER('ecallmgr_fs_conferences_shared'),
-    ?WORKER('ecallmgr_fs_conferences'),
-    ?WORKER('ecallmgr_fs_amqp_listener')
+    ?WORKER('ecallmgr_fs_conferences')
 ]).
 
 %%==============================================================================
